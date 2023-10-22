@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
 //        task1();
-        task2();
-//        task3();
+//        task2();
+        task3();
 
     }
 
@@ -36,10 +36,10 @@ public class Main {
 // "Сегодня пятница, ...-е число. Необходимо подготовить отчет."
 // В нашем месяце 31 день. В результате у вас должно вывестись от 4 до 5 сообщений с напоминаниями по разным датам.
     public static void task2() {
-        int a = 1;
+        int a = 6;
         for (; a <= 33; a = a + 7) {
             if (a > 2) {
-                System.out.println("Сегодня пятница, " + (a - 2) + "-е число. Необходимо подготовить отчет.");
+                System.out.println("Сегодня пятница, " + a + "-е число. Необходимо подготовить отчет.");
             }
         }
     }
@@ -58,10 +58,14 @@ public class Main {
 // 1975
 // 2054
     public static void task3() {
-        int a = 1;
-        for (; a <= 2100; a = a + 79) {
-            if (a > 1850 && a < 2200) {
-                System.out.println(a);
+        int year = 2023; // текущий год
+        int b = 200; // задать сколько лет до текущего года
+        int c = 100; // задать сколько лет после текущего года
+        b = year - b;
+        c = year + c;
+        for (int a = 0; a <= 2100; a = a + 79) {
+            if (a > b && a < c) {
+                System.out.println(a + " в этот год над Землей пролетала комета.");
             }
         }
     }
